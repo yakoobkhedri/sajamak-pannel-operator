@@ -1,0 +1,285 @@
+@font-face {
+    font-family: "parastoo-Regular";
+    src: url('../fonts/web/Farsi-Digits-Without-Latin/Parastoo-FD-WOL.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: "parastoo-Bold";
+    src: url('../fonts/web/Farsi-Digits-Without-Latin/Parastoo-Bold-FD-WOL.ttf') format("truetype");
+}
+
+body {
+    font-family: "parastoo-Regular";
+    user-select: none;
+    background-color: #f9fafb;
+    overflow: hidden;
+}
+
+.font-bold {
+    font-family: "parastoo-Bold";
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.sidebar::-webkit-scrollbar,
+.sidebar::-webkit-scrollbar,
+.sidebar::-webkit-scrollbar,
+section>.col-10::-webkit-scrollbar {
+    width: 4px;
+    /* width of the entire scrollbar */
+}
+
+.sidebar::-webkit-scrollbar-track,
+.sidebar::-webkit-scrollbar-track,
+.sidebar::-webkit-scrollbar-track,
+section > .col-10::-webkit-scrollbar-track {
+    background: transparent;
+    /* color of the tracking area */
+    margin: 29px 0;
+}
+
+.sidebar::-webkit-scrollbar-thumb,
+.sidebar::-webkit-scrollbar-thumb,
+.sidebar::-webkit-scrollbar-thumb,
+section > .col-10::-webkit-scrollbar-thumb {
+    background-color: gray;
+    /* color of the scroll thumb */
+    border-radius: 40px;
+    /* roundness of the scroll thumb */
+    border: 1px solid transparent;
+    /* creates padding around scroll thumb */
+}
+
+.sidebar,section>.col-10 {
+    scrollbar-width: thin;
+    /* "auto" or "thin" */
+    scrollbar-color: gray transparent;
+    /* scroll thumb and track */
+    scroll-margin: 29px 0;
+}
+
+.z-10 {
+    z-index: 10;
+}
+.h-100vh{
+    height: 100vh;
+}
+.bg-gray {
+    background-color: #f9fafb;
+}
+
+.bg-gray2 {
+    background-color: #374151;
+}
+
+.bg-gray3 {
+    background-color: #E5E7EB;
+}
+
+.text-gray {
+    color: #1F2A37;
+}
+
+.rotate-45 {
+    transform: rotate(45deg);
+}
+
+.outline-none {
+    outline: none;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .4s;
+}
+
+.fs-7 {
+    font-size: 12px;
+}
+
+.fs-8 {
+    font-size: 10px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.h-64 {
+    height: 64px;
+}
+
+.w-64 {
+    width: 64px;
+}
+
+.w-184 {
+    width: 184px;
+}
+
+.w-390 {
+    width: 390px;
+}
+
+.divider {
+    width: 1.5px;
+    height: 38px;
+    background-color: #D1D5DB;
+
+}
+
+.form-select {
+    background-position: left.75rem center;
+}
+
+.transition {
+    transition: all .4s;
+}
+
+.rounded-4 {
+    border-radius: 18px;
+}
+
+.rounded-12 {
+    border-radius: 12px;
+}
+
+.-bottom-4 {
+    bottom: -4px;
+}
+.opacity-none {
+    opacity: 0;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    float: right;
+    padding-left: 0.5rem;
+}
+
+.paginations a:hover,
+.paginations a.active {
+    background-color: #1F2A37;
+    color: #E5E7EB;
+}
+
+.alert-dismissible .btn-close {
+    left: 0;
+    right: auto;
+}
+
+.nav-link {
+    color: #9CA3AF !important;
+}
+
+.nav-tabs .nav-link.active {
+    color: #00BED8 !important;
+    border-color: transparent;
+    border-bottom: 3px solid #00BED8;
+}
+
+.nav-tabs .nav-link:hover {
+    border-color: transparent;
+    color: #00BED8 !important;
+    border-bottom: 3px solid #00BED8;
+}
+
+/* sidebar */
+.sidebar {
+    background-color: #1F2A37;
+    width: 194px;
+    overflow-y: auto;
+    height: 100vh;
+    transition: all .4s;
+    z-index: 9;
+}
+
+.sidebar.close {
+    width: 98px;
+}
+
+.sidebar.close img[alt="bell-alert"],
+.sidebar.close img[alt="cog"],
+.sidebar.close .avatar-name,
+.sidebar.close ul p {
+    display: none;
+}
+
+.sidebar.close #toggle-sidebar {
+    transform: rotate(180deg);
+}
+
+.avatar {
+    width: 68px;
+    height: 68px;
+    border: 2px solid #9CA3AF;
+}
+
+.sidebar ul li.active,
+.sidebar ul li:hover {
+    background-color: #111827;
+}
+
+.sidebar ul {
+    font-size: 13px;
+    background-color: #1F2A37;
+}
+
+.sidebar ul li {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    cursor: pointer;
+}
+
+/* responsive */
+@media only screen and (max-width:1400px) {}
+
+@media only screen and (max-width:1200px) {}
+
+@media only screen and (max-width:992px) {
+
+    #overlay {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.336);
+        inset: 0;
+        transition: all .4s;
+        opacity: 0;
+        z-index: -2;
+    }
+
+    #overlay.active {
+        opacity: 100%;
+        z-index: 8;
+    }
+
+    .sidebar.close {
+        right: 0;
+        width: 280px;
+        position: fixed;
+    }
+
+    .sidebar {
+        right: -400px;
+        width: 280px;
+        position: fixed;
+    }
+
+    .sidebar.close img[alt="bell-alert"],
+    .sidebar.close img[alt="cog"],
+    .sidebar.close .avatar-name,
+    .sidebar.close ul p {
+        display: block;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .w-390 {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:576px) {}
+
+@media only screen and (max-width:400px) {}
