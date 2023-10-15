@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel='stylesheet' type='text/css' media='screen' href='assets/css/styles.css'>
+  <title>پیش نویس قرارداد</title>
+</head>
+
+<body>
+
+  <section class="d-flex mx-0">
+    <div class="px-0 sidebar transition h-100vh">
+      <div class="py-4 px-3">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center gap-3">
+            <img alt="" src="assets/img/Vector.png" class="cursor">
+            <img alt="bell-alert" src="assets/img/bell-alert.svg" class="cursor transition">
+            <img alt="cog" src="assets/img/cog.svg" class="cursor transition">
+          </div>
+          <img alt="" src="assets/img/chevron-double-right.svg" class="cursor transition" id="toggle-sidebar">
+        </div>
+        <div class="avatar d-flex align-items-center justify-content-center rounded-circle mx-auto mt-5 position-relative">
+          <div>
+            <img src="assets/img/60.png">
+            <div>
+              <input type="file" class="position-absolute top-0 end-0 start-0 bottom-0 w-100 z-10 cursor opacity-none">
+              <img alt="add-circle" src="assets/img/add-circle.svg" class="position-absolute -bottom-4 start-0 cursor">
+            </div>
+          </div>
+        </div>
+        <div class="text-center text-white mt-4 avatar-name transition">
+          <h6 class="font-bold">سارا جعفری</h6>
+          <p class="text-white-50">امور پیمانکاری</p>
+        </div>
+      </div>
+      <ul class="m-0 px-0 fw-bold">
+     
+        <li class="px-3 transition">
+          <a href="requests.html" class="d-flex align-items-center justify-content-between text-white">
+            <div class="d-flex align-items-center gap-3">
+              <img alt="menu" src="assets/img/document-text.svg">
+              <p class="mb-0">درخواست ها</p>
+            </div>
+            <img alt="arrow" src="assets/img/arrow-left.png">
+          </a>
+        </li>
+        <li class="px-3 transition">
+          <a href="projects.html" class="d-flex align-items-center justify-content-between text-white">
+            <div class="d-flex align-items-center gap-3">
+              <img alt="menu" src="assets/img/document-text.svg">
+              <p class="mb-0">پروژه ها</p>
+            </div>
+            <img alt="arrow" src="assets/img/arrow-left.png">
+          </a>
+        </li>
+        <li class="px-3 transition active">
+          <a href="contracts.html" class="d-flex align-items-center justify-content-between text-white">
+            <div class="d-flex align-items-center gap-3">
+              <img alt="menu" src="assets/img/document-text.svg">
+              <p class="mb-0">قرارداد ها</p>
+            </div>
+            <img alt="arrow" src="assets/img/arrow-left.png">
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="p-3 col-10 bg-gray flex-grow-1 h-100vh overflow-auto">
+      <div id="overlay"></div>
+      <!-- header -->
+      <header class="d-flex align-items-lg-center gap-4 flex-column flex-lg-row justify-content-lg-between">
+        <div class="d-flex flex-column flex-md-row align-items-center gap-3">
+          <div class="d-flex align-items-center gap-3 justify-content-between w-100">
+            <svg id="openSidebar" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor"
+              class="bi bi-list d-lg-none cursor" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+            <a>
+              <img alt="logo" src="assets/img/Frame 9249.png">
+            </a>
+          </div>
+          <div class="bg-white rounded-12 w-390 py-1 px-2 border d-flex align-items-center justify-content-between">
+            <input placeholder="جستجو" class="border-0 outline-none flex-grow-1">
+            <img alt="search" src="assets/img/Vector.svg">
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <div class="language position-relative cursor">
+            <div class="d-flex align-items-center gap-2 dropdown-toggle" href="#" role="button"
+              data-bs-toggle="dropdown">
+              <img alt="language" src="assets/img/artwork.png">
+              <p class="mb-0 fw-bold fs-7 text-secondary">فارسی</p>
+            </div>
+            <ul class="dropdown-menu p-0 m-0 font-bold bg-white shadow-sm rounded-4">
+              <li class="d-flex align-items-center justify-content-center py-3 gap-3 border-bottom">
+                <img alt="language" src="assets/img/artwork.png">
+                <p class="mb-0 fw-bold fs-7 text-secondary">فارسی</p>
+              </li>
+              <li class="d-flex align-items-center justify-content-center py-3 gap-3">
+                <img alt="language" src="assets/img/artwork.png">
+                <p class="mb-0 fw-bold fs-7 text-secondary">English</p>
+              </li>
+            </ul>
+          </div>
+          <span class="divider"></span>
+          <div class="exit d-flex align-items-center gap-2 cursor">
+            <img alt="language" src="assets/img/exit.svg">
+            <p class="mb-0 fw-bold fs-7 text-secondary">خروج از حساب </p>
+          </div>
+        </div>
+      </header>
+      <!-- main -->
+      <main>
+        <!-- breadcrumb -->
+        <nav aria-label="breadcrumb" class="mt-4">
+          <ol class="breadcrumb fs-7 font-bold">
+            <li class="breadcrumb-item"><a class="text-dark" href="dashboard.html">ناحیه کاربری</a></li>
+            <li class="breadcrumb-item active" aria-current="page">قراردادها</li>
+          </ol>
+        </nav>
+        <!-- table -->
+        <div class="bg-white rounded-4 pb-3">
+          <div class="d-flex flex-wrap gap-3 align-items-center justify-content-between p-3 border-bottom">
+            <a href="contracts.html" class="d-flex align-items-center gap-2 font-bold mb-0 text-dark">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M4.5 12L19.5 12M19.5 12L12.75 5.25M19.5 12L12.75 18.75" stroke="#0F172A" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              قرارداد 2365
+            </a>
+            <div class="d-flex align-items-center gap-2">
+              <a class="d-flex align-items-center justify-content-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <rect width="32" height="32" rx="6" fill="#E5E7EB" />
+                  <path
+                    d="M10.7201 17.8287C10.4794 17.8589 10.2394 17.8911 10 17.9253M10.7201 17.8287C12.4496 17.6118 14.2117 17.5 16 17.5C17.7883 17.5 19.5504 17.6118 21.2799 17.8287M10.7201 17.8287L10.3409 22M21.2799 17.8287C21.5206 17.8589 21.7606 17.8911 22 17.9253M21.2799 17.8287L21.6591 22M21.6591 22L21.8885 24.5231C21.9484 25.182 21.4296 25.75 20.7681 25.75H11.2319C10.5704 25.75 10.0516 25.182 10.1115 24.5231L10.3409 22M21.6591 22H22.75C23.9926 22 25 20.9926 25 19.75V13.4557C25 12.3747 24.2321 11.4408 23.1631 11.2809C22.5293 11.186 21.8916 11.1036 21.25 11.0338M10.3409 22H9.25C8.00736 22 7 20.9926 7 19.75V13.4557C7 12.3747 7.7679 11.4408 8.83694 11.2809C9.47066 11.186 10.1084 11.1036 10.75 11.0338M21.25 11.0338C19.5258 10.8463 17.7741 10.75 16 10.75C14.2259 10.75 12.4742 10.8463 10.75 11.0338M21.25 11.0338V7.375C21.25 6.75368 20.7463 6.25 20.125 6.25H11.875C11.2537 6.25 10.75 6.75368 10.75 7.375V11.0338M22 14.5H22.0075V14.5075H22V14.5ZM19 14.5H19.0075V14.5075H19V14.5Z"
+                    stroke="#374151" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <a class="d-flex align-items-center justify-content-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <rect width="32" height="32" rx="6" fill="#E5E7EB" />
+                  <path
+                    d="M7 20.5V22.75C7 23.9926 8.00736 25 9.25 25H22.75C23.9926 25 25 23.9926 25 22.75V20.5M20.5 16L16 20.5M16 20.5L11.5 16M16 20.5V7"
+                    stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="py-4 px-md-5 px-3">
+            <div class="text-center">
+              <p class="fs-14 fw-bold">باسمه تعالی</p>
+              <h4 class="font-bold">"مبایعه نامه"</h4>
+            </div>
+            <div class="text-start fs-14 fw-bold text-secondary">
+              <p>تاريـخ: 21/08/1401</p>
+              <p> شماره: ۰۷-G-۱۴۰۱</p>
+            </div>
+            <p class="fs-14 lh-lg text-justify">
+              <span class="font-bold d-block">ماده 1- طرفین قرارداد</span>
+              طرف اول قرارداد (فروشنده): <span class="font-bold">سامانه جامع اجرایی معادن کشور ( سجامک)</span> به شماره
+              اقتصادی <span class="font-bold">65326 </span> ، شناسه ملّی
+              <span class="font-bold">352325</span> ، به نشانی <span class="font-bold">کرمان، میدان امیرکبیر، بلوار
+                عدالت،
+                خیابان بنفشه کوچه 12 ، پلاک 18 ،</span> به کد پستی <span class="font-bold">4498562353</span> و به شماره
+              تلفن <span class="font-bold">9-2440786-034</span> می­باشد.
+              <br>
+              <br>
+              طرف دوم قرارداد (خریدار): <span class="font-bold">آقای صابر علی نژاد</span> به شماره ملی <span
+                class="font-bold">123568945</span> ، به نشانی : <span class="font-bold">رفسنجان،میدان امیرکبیر،
+                بلوار عدالت، خیابان بنفشه، کوچه 12، پلاک </span> ، به کد پستی <span class="font-bold">4498562353</span>
+              و به شماره تلفن: <span class="font-bold">9-2440786-034</span> می
+              ­باشد.
+              <br>
+              تبصره 1- طرفین مطابق ماده 1010 قانون مدنی اقامتگاه خویش را به شرح فوق اعلام نمودند. لذا کلیه‌ مکاتبات و
+              اوراق قانونی به نشانی‌های مذکور ارسال و ابلاغ شده تلقی خواهد شد.
+              <br>
+              ماده 2- موضوع قرارداد
+              <br>
+              موضوع قرارداد عبارت است از بیع 20,000 (بیست هزار) تن کلوخه سنگ آهن خشک با مشخصات ذیل و به صورت تحویل در
+              محل کارخانه واقع در 35 کیلومتری شهرستان سیرجان:
+              <br>
+              Fe: 52%, FeO: 16%, S: 0.3%
+              <br>
+              تبصره 2- میزان رطوبت موجود در سنگ آهن تحویلی کسر و ملاک طرفین میزان سنگ آهن خشک و بدون رطوبت خواهد بود.
+              ماده 3- مدت قرارداد
+              طول مدت قرارداد دو ماه و از تاریخ <span class="font-bold">1401/08/21</span> الی <span
+                class="font-bold">1401/10/21</span> خواهد بود.
+              <br>
+              ماده 4- ثمن مورد قراداد
+              <br>
+              4-1- قیمت هر تُن سنگ آهن موضوع قرارداد با مشخصات مندرج در ماده (2) به طور متوسط برابر با 6،000،000 (شش
+              میلیون) ریال تعیین گردید.
+              <br>
+              4-2- در صورت افزایش و یا کاهش میانگین عیار آهن (Fe) از 52% و یا FeO از 16% به ازای هر یک درصد در هر تُن به
+              ترتیب افزایش مبلغ 100,000 (یکصد هزار) ریال و یا کاهش مبلغ 150,000 (یکصد و پنجاه هزار) ریال در محاسبه قیمت
+              لحاظ می­گردد.
+              <br>
+              4-3- ملاک تعیین عیار و نمونه­برداری محموله­های تحویلی آنالیز صادره از سوی آزمایشگاه شرکتSGS ایران (با
+              هزینه مشترک طرفین) می‌باشد.
+              <br>
+              ماده 5- نحوه پرداخت
+              <br>
+              5-1- مبلغ ۴۰ (چهل) میلیارد ریال به‌عنوان پیش‌پرداخت همزمان با امضای توافق، توسط طرف دوم به طرف اول پرداخت
+              می‌گردد.
+              <br>
+              5-2- تسویه حساب نهایی پنج روز کاری پس از تحویل کل محموله موضوع قرارداد و با احتساب پاداش و جریمه قراردادی
+              با توجه به نتایج آزمایشگاه شرکت SGS ایران می‌باشد.
+              <br>
+              5-3- طبق توافق طرفین، ملاک تعیین عیار و نمونه­برداری محموله­های تحویلی آنالیز صادره از سوی آزمایشگاه شرکت
+              SGS ایران (با هزینه مشترک طرفین) می‌باشد.
+              <br>
+              5-4- حساب شماره............................. نزد بانک ............... شعبه ................. به نام
+              فروشنده جهت واریز وجوه قراردادی به خریدار معرفی می‌گردد.
+              <br>
+              ماده 6- نحوه تحویل، بارگیری و حمل
+              <br>
+              6-1- مهلت حمل کالای موضوع قرارداد از زمان تأدیه پیش­پرداخت و صدور حواله، حداکثر دو ماه شمسی (60 روز) است.
+              <br>
+              6-2- موضوع قرارداد به صورت تحویل در سیرجان بوده و کلیه هزینه­های بارگیری بر عهده فروشنده و حمل و نقل بر
+              عهده خریدار می‌باشد.
+              <br>
+              6-3- ملاك وزن سنگ آهن تحويلي، برگه‌ باسكول محل اعلامی خریدار خواهد بود.
+              <br>
+              6-4- خریدار می­تواند راساً و بدون اخذ هر­گونه موافقتی از جانب فروشنده کلیه حقوق خویش نسبت به قرارداد حاضر
+              را با جمیع شرایط و مفاد آن به شخص ثالث دیگری منتقل کند. بدیهی است که در این‌صورت شخص ثالث، قائم­مقام
+              خریدار محسوب می­شود و از کلیه حقوق خریدار منتفع خواهد شد.
+              <br>
+              ماده 7- کلیه کسورات احتمالی قانونی و مالیات از جمله ارزش افزوده، حقوق دولتی و غیره به عهده فروشنده خواهد
+              بود.
+              <br>
+              ماده 8- وجه التزام تاخیر
+              <br>
+              در صورتی که تا تاریخ 21/10/1401 کلیه محموله‌ موضوع قرارداد تحویل خریدار نگردد، فروشنده موظف است به ازای هر
+              تُن محموله‌ی تحویل نشده مطابق قرارداد حاضر، به ازای هر روز تأخیر مبلغ 40,000 (چهل هزار) ریال به عنوان وجه
+              التزام تأخیر در اجرای تعهد به خریدار پرداخت نماید. پرداخت مبلغ مزبور نافی اصل تعهد فروشنده نخواهد بود.
+              <br>
+              ماده 9- موارد و مصادیق فورس ماژور
+              <br>
+              در صورت بروز حوادث طبیعی غیر مترقبه مادامیکه حالت مذکور ادامه دارد، عدم انجام تعهدات قراردادی ناشی از فورس
+              ماژور که انجام تمام یا قسمتی از تعهدات امکان‌پذیر نباشد، تخلف از مواد قرارداد محسوب نمی‌گردد. تشخیص فورس
+              ماژور بودن هر کدام از تعهدات و مسئولیت‌های مربوط به مفاد قرارداد با مرجع حل اختلاف و داوری توافق شده طرفین
+              می­باشد.
+              <br>
+              ماده 10- حل و فصل اختلافات و داوری
+              <br>
+              طبق توافق طرفین در صورت بروز هرگونه اختلاف در تعبیر، تفسیر و یا اجرای مفاد این قرارداد و پیوست­های آن و
+              همچنین مواردی که در این قرارداد پیش­بینی نشده­ است موضوع به داوری داور مرضی الطرفین آقای.......
+              <br>
+              …………… به کد ملی.............................. ارجاع و داور منتخب ولو کراراً در هرگونه اختلاف اعلام رأی
+              می­نماید و رأی داوری برای طرفین قطعی و لازم الاجرا خواهد بود. ضمناً هرگونه اظهارنظر در خصوص صحت و اعتبار
+              قرارداد نیز مطلقاً در صلاحیت داور قرار خواهد داشت.
+              <br>
+              ماده 11- فسخ قرارداد
+              <br>
+              جز آنچه در این قرارداد ذکر شد طرفین کلیه خیارات قانونی و شرعی را حتی خیار غبن فاحش ولو افحش را از خود سلب
+              و ساقط نمودند.
+              <br>
+              ماده 12- طرف اول متضامناً متعهد به اجرای کلیه تعهدات این قرارداد خواهد بود.
+              <br>
+              ماده 13- مواد و نُسخ قرارداد
+              <br>
+              این قرارداد مطابق مواد 10 و 219 قانون مدنی در دو نسخه متحدالمتن که حکم واحد را دارند بدون قلم­خوردگی و
+              خط­زدگی، شامل 13 ماده و 2 تبصره در تاریخ 21/08/1401 به امضای طرفین رسیده و هر نسخه در اختیار یکی از طرفین
+              خواهد بود.
+            </p>
+            <div class="me-auto">
+              <div class="d-flex align-items-center justify-content-end gap-3">
+                <input data-bs-dismiss="modal" type="reset" value="پیش نویس"
+                  class="w-184 d-block btn font-bold bg-gray3 w-100 py-3 mt-2 text-secondary">
+                <a class="w-184 d-block btn btn-info w-100 py-3 mt-2 text-white font-bold" data-bs-toggle="modal"
+                  data-bs-target="#submitModal">تایید</a>
+              </div>
+            </div>
+          </div>
+      </main>
+    </div>
+  </section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="assets/js/scrollreveal.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>/
+  <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>
