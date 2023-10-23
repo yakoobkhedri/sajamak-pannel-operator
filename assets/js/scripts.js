@@ -54,45 +54,19 @@ ScrollReveal().reveal('.right', {
 
 // datapicker
 
-$(function() {
-  $('input[name="start"]').daterangepicker({
-    "locale": {
-      "format": "MM/DD/YYYY",
-      "separator": " - ",
-      "applyLabel": "اجرا",
-      "cancelLabel": "کنسل",
-      "fromLabel": "از",
-      "toLabel": "تا",
-      "customRangeLabel": "Custom",
-      "weekLabel": "W",
-      "daysOfWeek": [
-          "Su",
-          "Mo",
-          "Tu",
-          "We",
-          "Th",
-          "Fr",
-          "Sa"
-      ],
-      "monthNames": [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
-          "August",
-          "September",
-          "October",
-          "November",
-          "December"
-      ],
-      "firstDay": 1
-  },
-    singleDatePicker: true,
-    showDropdowns: true,
-    minYear: 1901,
-    maxYear: parseInt(moment().format('YYYY'),10)
-  },);
-});
+jalaliDatepicker.startWatch();
+
+// sweet alert
+
+let submitForm=document.getElementById('submit');
+
+submitForm.addEventListener('click',function (e) {
+  e.preventDefault();
+  Swal.fire({
+    position: 'top-center',
+    icon: 'success',
+    title: 'با موفقیت ثبت شد',
+    showConfirmButton: false,
+    timer: 3000
+  })
+})

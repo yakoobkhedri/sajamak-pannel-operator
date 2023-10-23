@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel='stylesheet' type='text/css' media='screen' href='assets/css/styles.css'>
+    <link type="text/css" rel="stylesheet" href="assets/css/jalalidatepicker.min.css" />
     <title>ثبت پروژه</title>
 </head>
 
@@ -186,11 +187,7 @@
                                     <div class="col-lg-6">
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label">تاریخ شروع</label>
-                                            <select class="form-select">
-                                                <option>1402/01/08</option>
-                                                <option>1402/01/06</option>
-                                                <option>1402/01/04</option>
-                                            </select>
+                                            <input type="text" class="date rounded-3 form-control" data-jdp />
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -214,11 +211,7 @@
                                     <div class="col-lg-6">
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label">تاریخ پایان</label>
-                                            <select class="form-select">
-                                                <option>1402/01/08</option>
-                                                <option>1402/01/06</option>
-                                                <option>1402/01/04</option>
-                                            </select>
+                                            <input type="text" class="date rounded-3 form-control" data-jdp />
                                         </div>
                                     </div>
                                     <div class="col-12">
@@ -229,7 +222,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <input type="submit" value="ثبت پروژه"
+                                        <input type="submit" value="ثبت پروژه" id="submit"
                                             class="btn btn-info py-3 mt-2 text-white font-bold w-184 me-auto d-block">
                                     </div>
                                 </form>
@@ -240,7 +233,9 @@
         </div>
     </section>
 
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="assets/js/jalalidatepicker.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="assets/js/scrollreveal.min.js"></script>
     <script src="assets/js/scripts.js"></script>
