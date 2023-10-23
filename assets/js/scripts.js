@@ -51,3 +51,48 @@ ScrollReveal().reveal('.right', {
   delay: 500,
   easing: 'ease-out'
 });
+
+// datapicker
+
+$(function() {
+  $('input[name="start"]').daterangepicker({
+    "locale": {
+      "format": "MM/DD/YYYY",
+      "separator": " - ",
+      "applyLabel": "اجرا",
+      "cancelLabel": "کنسل",
+      "fromLabel": "از",
+      "toLabel": "تا",
+      "customRangeLabel": "Custom",
+      "weekLabel": "W",
+      "daysOfWeek": [
+          "Su",
+          "Mo",
+          "Tu",
+          "We",
+          "Th",
+          "Fr",
+          "Sa"
+      ],
+      "monthNames": [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December"
+      ],
+      "firstDay": 1
+  },
+    singleDatePicker: true,
+    showDropdowns: true,
+    minYear: 1901,
+    maxYear: parseInt(moment().format('YYYY'),10)
+  },);
+});

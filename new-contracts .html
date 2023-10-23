@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
   <link rel='stylesheet' type='text/css' media='screen' href='assets/css/styles.css'>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
   <title>قرارداد جدید</title>
 </head>
 
@@ -190,21 +191,13 @@
                             <div class="col-lg-6">
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">تاریخ شروع</label>
-                                    <select class="form-select">
-                                        <option>1402/01/08</option>
-                                        <option>1402/01/06</option>
-                                        <option>1402/01/04</option>
-                                    </select>
+                                    <input type="text" class="date rounded-3 form-control" name="start"/>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                               <div class="mb-3">
                                   <label for="exampleInputEmail1" class="form-label">تاریخ پایان</label>
-                                  <select class="form-select">
-                                      <option>1402/01/08</option>
-                                      <option>1402/01/06</option>
-                                      <option>1402/01/04</option>
-                                  </select>
+                                  <input type="text" class="date rounded-3 form-control" name="start"/>
                               </div>
                           </div>
                             <div class="col-12">
@@ -254,6 +247,9 @@
   </section>
 
 
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   <script src="assets/js/scrollreveal.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>/
