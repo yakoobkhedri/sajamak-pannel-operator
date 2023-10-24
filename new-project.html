@@ -8,7 +8,7 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel='stylesheet' type='text/css' media='screen' href='assets/css/styles.css'>
     <link type="text/css" rel="stylesheet" href="assets/css/jalalidatepicker.min.css" />
-    <title>ثبت پروژه</title>
+    <title>جزئیات پروژه</title>
 </head>
 
 <body>
@@ -117,19 +117,24 @@
             <main>
                 <!-- breadcrumb -->
                 <nav aria-label="breadcrumb" class="mt-4">
-                    <ol class="breadcrumb fs-7 font-bold">
-                        <li class="breadcrumb-item"><a class="text-dark" href="dashboard.html">ناحیه کاربری</a></li>
+                  <ol class="breadcrumb fs-7 font-bold gap-2">
+                    <li><a href="dashboard.html" class="text-dark">داشبورد</a></li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="11" viewBox="0 0 6 11" fill="none">
+                      <path d="M1.50447 10.854H0.300469L4.45847 0.0459996H5.64847L1.50447 10.854Z" fill="#1F2A37"/>
+                      </svg>
                         <li class="breadcrumb-item"><a class="text-dark" href="projects.html">پروژه ها</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">ثبت پروژه</li>
+                        <li class="breadcrumb-item active" aria-current="page">پروژه شماره 7</li>
                     </ol>
                 </nav>
                 <!-- table -->
                 <div class="bg-white rounded-4 pb-3">
                     <div class="d-flex flex-wrap gap-3 align-items-center justify-content-between p-3 border-bottom">
-                        <p class="d-flex align-items-center gap-2 font-bold mb-0">
-                            <img alt="icon" src="assets/img/project-details.svg">
-                            اطلاعات پروژه
-                        </p>
+                        <a href="projects.html" class="d-flex align-items-center gap-2 font-bold mb-0 text-dark">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M13.5 4.5L21 12M21 12L13.5 19.5M21 12H3" stroke="#374151" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                           پروژه شماره 7
+                        </a>
                     </div>
                     <div class="px-3">
                         <div class="tab-content mt-4" id="myTabContent">
@@ -138,92 +143,71 @@
                                     <div class="col-lg-6">
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label">عنوان پروژه</label>
-                                            <input type="text" class="form-control" placeholder="عنوان پروژه 7">
+                                            <input disabled type="text" class="form-control bg-white border-0 fw-bold" value="عنوان پروژه 7">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label">زمینه فعالیت</label>
-                                            <select class="form-select">
-                                                <option>شناسایی و اکتشافات</option>
-                                                <option>شناسایی و اکتشافات</option>
-                                                <option>شناسایی و اکتشافات</option>
-                                            </select>
+                                            <input disabled type="text" class="form-control bg-white border-0 fw-bold" value="شناسایی و اکتشاف">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label">شماره قرارداد</label>
-                                            <input type="text" class="form-control" placeholder="شماره قرارداد">
+                                            <input disabled type="text" class="form-control bg-white border-0 fw-bold" value="شماره قرارداد">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label">نوع تجهیزات و ماشین
                                                 آلات</label>
-                                            <select class="form-select">
-                                                <option>ماشین آلات عمرانی و حفاری</option>
-                                                <option>ماشین آلات عمرانی و حفاری</option>
-                                                <option>ماشین آلات عمرانی و حفاری</option>
-                                            </select>
+                                                <input disabled type="text" class="form-control bg-white border-0 fw-bold" value="ماشین آلات عمرانی و حفاری">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label">کارفرما</label>
-                                            <input type="text" class="form-control" placeholder="آقای مهندس نیک زاده">
+                                            <input disabled type="text" class="form-control bg-white border-0 fw-bold" value="آقای مهندس نیک زاده">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label">پیمانکار</label>
-                                            <select class="form-select">
-                                                <option>خانم کریم زاده</option>
-                                                <option>خانم کریم زاده</option>
-                                                <option>خانم کریم زاده</option>
-                                            </select>
+                                            <label for="exampleInputEmail1" class="form-label">نوع پروژه</label>
+                                            <input disabled type="text" class="form-control bg-white border-0 fw-bold" value="پیمانکاری">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label">تاریخ شروع</label>
-                                            <input type="text" class="date rounded-3 form-control" data-jdp />
+                                            <input disabled type="text" class="form-control bg-white border-0 fw-bold" value="1402/01/08">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label">هزینه دستمزد
                                                 (تومان)</label>
-                                            <input type="text" class="form-control" placeholder="350,000">
+                                            <input disabled type="text" class="form-control bg-white border-0 fw-bold" value="350,000">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label">انتخاب شهر</label>
-                                            <select class="form-select">
-                                                <option>تهران</option>
-                                                <option>اصفهان</option>
-                                                <option>قم</option>
-                                                <option>یزد</option>
-                                            </select>
+                                            <input disabled type="text" class="form-control bg-white border-0 fw-bold" value="کرمان">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label">تاریخ پایان</label>
-                                            <input type="text" class="date rounded-3 form-control" data-jdp />
+                                            <input disabled type="text" class="form-control bg-white border-0 fw-bold" value="1402/01/29">
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label">توضیحات پروژه</label>
-                                            <textarea rows="7"
-                                                class="form-control">توضیحات</textarea>
+                                            <textarea disabled rows="7"
+                                                class="form-control bg-white border-0 fw-bold">احتراما به استحضار میرساند با توجه به اینکه شرکت نوین حفار معادن مشغول به راه اندازی معدن مس در شهر رفسنجان می باشد لذا خواهشمند است جهت بررسی اولیه کانی و مواد معدنی تجهیزات مورد نیاز آزمایشگاهی در اختیار شرکت مربوطه قرار داده تا مراتب آزمایشگاهی مواد و فلزات کشف شده را مورد بررسی قرار دهیم .سپاس فراوان</textarea>
                                         </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <input type="submit" value="ثبت پروژه" id="submit"
-                                            class="btn btn-info py-3 mt-2 text-white font-bold w-184 me-auto d-block">
                                     </div>
                                 </form>
                             </div>
