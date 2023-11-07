@@ -238,6 +238,11 @@ a {
     cursor: pointer;
 }
 
+table img{
+    width: 32px;
+    height: 32px;
+}
+
 /* responsive */
 @media only screen and (max-width:1400px) {}
 
