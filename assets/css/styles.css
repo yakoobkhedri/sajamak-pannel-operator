@@ -217,6 +217,11 @@ a {
     border: 2px solid #9CA3AF;
 }
 
+.avatar > div > img{
+    width: 64px;
+    height: 64px;
+}
+
 .sidebar ul li.active,
 .sidebar ul li:hover {
     background-color: #111827;
