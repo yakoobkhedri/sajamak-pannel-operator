@@ -24,3 +24,7 @@ $(document).ready( function () {
     paging: false
   });
 } );
+
+// datapicker
+
+jalaliDatepicker.startWatch();
