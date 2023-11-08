@@ -59,7 +59,9 @@ section > .col-10::-webkit-scrollbar-thumb {
     /* scroll thumb and track */
     scroll-margin: 29px 0;
 }
-
+.z-6 {
+    z-index: 6;
+}
 .z-10 {
     z-index: 10;
 }
@@ -120,10 +122,25 @@ a {
     width: 184px;
 }
 
+.w-220 {
+    width: 220px;
+}
+
 .w-390 {
     width: 390px;
 }
-
+.top-51{
+    top: 51px;
+}
+.top-52{
+    top: 53px;
+}
+.-right-195{
+    right: -195px;
+}
+.-mt-102{
+    margin-top: -102px;
+}
 .divider {
     width: 1.5px;
     height: 38px;
@@ -243,6 +260,35 @@ table img{
     height: 32px;
 }
 
+
+#myTable_filter,#myTable2_filter {
+    font-weight: bold;
+    font-size: 15px;
+    width: 390px;
+    border-radius: 12px!important;
+    border:1px solid #dee2e6 !important;
+  }
+  #myTable_filter label,#myTable_filter label input,#myTable2_filter label,#myTable2_filter label input {
+   width: 100%;
+   border: 0;
+   outline: none;
+  }
+  .dataTables_wrapper .dataTables_filter {
+    position: relative!important;
+  }
+  .dataTables_wrapper .dataTables_filter::after {
+    position: absolute;
+    content: url('../img/Vector.svg')!important;
+    left: 13px;
+  top: 7px;
+  }
+  .dataTables_wrapper .dataTables_info {
+     display: none;
+  }
+  .dataTables_wrapper .dataTables_filter {
+    margin-bottom: 34px;
+  }
+
 /* responsive */
 @media only screen and (max-width:1400px) {}
 
@@ -285,9 +331,17 @@ table img{
 }
 
 @media only screen and (max-width:768px) {
-    .w-390 {
+    .w-390,#myTable_filter, #myTable2_filter  {
         width: 100%;
     }
+    .dataTables_wrapper .dataTables_filter {
+        margin-bottom: 76px;
+      }
+      .table-responsive .top-52 {
+        top: 104px;
+        padding-left: 0!important;
+        padding-right: 0!important;
+      }
 }
 
 @media only screen and (max-width:576px) {}

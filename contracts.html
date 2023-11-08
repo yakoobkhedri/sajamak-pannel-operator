@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
   <link rel='stylesheet' type='text/css' media='screen' href='assets/css/styles.css'>
+  <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
   <title>قراردادها</title>
 </head>
 
@@ -127,54 +128,47 @@
               قراردادها
             </p>
           </div>
-          <div class="p-3 d-flex flex-wrap gap-3 align-items-center justify-content-between">
-            <div class="bg-white rounded-12 w-390 py-1 px-2 border d-flex align-items-center justify-content-between">
-              <input placeholder="جستجو" class="border-0 outline-none flex-grow-1">
-              <img alt="search" src="assets/img/Vector.svg">
-            </div>
-            <select class="form-select w-184">
-              <option>وضعیت</option>
-              <option>در حال بررسی</option>
-              <option>تایید شده</option>
-              <option>رد شده</option>
-            </select>
+          <div class="table-responsive p-3 -mt-102 pt-5">
+            <div class="p-3 position-relative z-6 w-220 me-md-auto d-flex flex-wrap gap-3 align-items-center justify-content-end position-relative top-52">
+              <select class="form-select w-100">
+                <option>وضعیت</option>
+                <option>در حال بررسی</option>
+                <option>تایید شده</option>
+                <option>رد شده</option>
+              </select>
           </div>
-          <div class="table-responsive p-3">
-            <table class="table table-striped table-hover fs-14 fw-bold text-secondary">
+            <table id="myTable" class="table table-striped table-hover fs-14 fw-bold text-secondary">
               <thead>
                 <tr>
                   <th scope="col">
                     <div class="d-flex align-items-center gap-2">
-                      <img alt="sort" src="assets/img/chevron-up-down.svg">
                       <span class="cursor">شناسه</span>
                     </div>
                   </th>
                   <th scope="col">
                     <div class="d-flex align-items-center gap-2">
-                      <img alt="sort" src="assets/img/chevron-up-down.svg">
                       <span class="cursor">تاریخ</span>
                     </div>
                   </th>
                   <th scope="col">
                     <div class="d-flex align-items-center gap-2">
-                      <img alt="sort" src="assets/img/chevron-up-down.svg">
                       <span class="cursor">موضوع</span>
                     </div>
                   </th>
                   <th scope="col">
                     <div class="d-flex align-items-center gap-2">
-                      <img alt="sort" src="assets/img/chevron-up-down.svg">
                       <span class="cursor">توضیحات</span>
                     </div>
                   </th>
                   <th scope="col">
                     <div class="d-flex align-items-center gap-2">
-                      <img alt="sort" src="assets/img/chevron-up-down.svg">
                       <span class="cursor">وضعیت</span>
                     </div>
                   </th>
                   <th scope="col">
-                    <span class="cursor">جزئیات</span>
+                    <div class="d-flex align-items-center gap-2">
+                      <span class="cursor">جزئیات</span>
+                    </div>
                   </th>
                 </tr>
               </thead>
@@ -254,7 +248,9 @@
 
 
   <script src="assets/js/bootstrap.bundle.min.js"></script>/
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
   <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/jquery.dataTables.min.js"></script>
 </body>
 
 </html>

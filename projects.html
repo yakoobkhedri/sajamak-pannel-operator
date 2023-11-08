@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
   <link rel='stylesheet' type='text/css' media='screen' href='assets/css/styles.css'>
+  <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
   <title>پروژه ها</title>
 </head>
 
@@ -127,67 +128,52 @@
               کل پروژه‌ها
             </p>
           </div>
-          <div class="p-3">
-            <div class="bg-white rounded-12 w-390 py-1 px-2 border d-flex align-items-center justify-content-between">
-              <input placeholder="جستجو" class="border-0 outline-none flex-grow-1">
-              <img alt="search" src="assets/img/Vector.svg">
-            </div>
-          </div>
           <div class="table-responsive p-3">
-            <table class="table table-striped table-hover fs-14 fw-bold text-secondary">
+            <table id="myTable" class="table table-striped table-hover fs-14 fw-bold text-secondary">
               <thead>
                 <tr>
                   <th scope="col">
                     <div class="d-flex align-items-center gap-2">
-                      <img alt="sort" src="assets/img/chevron-up-down.svg">
                       <span class="cursor">شماره</span>
                     </div>
                   </th>
                   <th scope="col">
                     <div class="d-flex align-items-center gap-2">
-                      <img alt="sort" src="assets/img/chevron-up-down.svg">
                       <span class="cursor">عنوان پروژه</span>
                     </div>
                   </th>
                   <th scope="col">
                     <div class="d-flex align-items-center gap-2">
-                      <img alt="sort" src="assets/img/chevron-up-down.svg">
                       <span class="cursor">زمینه فعالیت</span>
                     </div>
                   </th>
                   <th scope="col">
                     <div class="d-flex align-items-center gap-2">
-                      <img alt="sort" src="assets/img/chevron-up-down.svg">
                       <span class="cursor">کارفرما</span>
                     </div>
                   </th>
                   <th scope="col">
                     <div class="d-flex align-items-center gap-2">
-                      <img alt="sort" src="assets/img/chevron-up-down.svg">
                       <span class="cursor">پیمانکار</span>
                     </div>
                   </th>
                   <th scope="col">
                     <div class="d-flex align-items-center gap-2">
-                      <img alt="sort" src="assets/img/chevron-up-down.svg">
                       <span class="cursor">تاریخ شروع</span>
                     </div>
                   </th>
                   <th scope="col">
                     <div class="d-flex align-items-center gap-2">
-                      <img alt="sort" src="assets/img/chevron-up-down.svg">
                       <span class="cursor">تاریخ پایان</span>
                     </div>
                   </th>
                   <th scope="col">
                     <div class="d-flex align-items-center gap-2">
-                      <img alt="sort" src="assets/img/chevron-up-down.svg">
                       <span class="cursor">وضعیت</span>
                     </div>
                   </th>
                   <th scope="col">
                     <div class="d-flex align-items-center gap-2">
-                      <img alt="sort" src="assets/img/chevron-up-down.svg">
                       <span class="cursor">جزئیات</span>
                     </div>
                   </th>
@@ -335,7 +321,9 @@
 
 
   <script src="assets/js/bootstrap.bundle.min.js"></script>/
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
   <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/jquery.dataTables.min.js"></script>
 </body>
 
 </html>
