@@ -268,7 +268,7 @@ table img{
     font-weight: bold;
     font-size: 15px;
     width: 390px;
-    border-radius: 12px!important;
+    border-radius: 6px!important;
     border:1px solid #dee2e6 !important;
   }
   #myTable_filter label,#myTable_filter label input,#myTable2_filter label,#myTable2_filter label input {
