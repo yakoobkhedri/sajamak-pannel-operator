@@ -240,6 +240,7 @@ a {
 .avatar > div > img{
     width: 64px;
     height: 64px;
+     border-radius: 100%;
 }
 
 .sidebar ul li.active,
