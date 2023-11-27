@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='../assets/css/styles.css'>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/jquery.uploader.css">
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <title>ثبت تیکت</title>
+</head>
+
+<body>
+
+    <section class="d-flex mx-0">
+        <div class="px-0 col-2 sidebar transition h-100vh">
+            <div class="py-4 px-3">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <img alt="" src="../assets/img/Vector.png" class="cursor">
+                  <img alt="bell-alert" src="../assets/img/bell-alert.svg" class="cursor transition">
+                  <img alt="cog" src="../assets/img/cog.svg" class="cursor transition">
+                </div>
+                <img alt="" src="../assets/img/chevron-double-right.svg" class="cursor transition" id="toggle-sidebar">
+              </div>
+              <div
+                class="avatar d-flex align-items-center justify-content-center rounded-circle mx-auto mt-5 position-relative">
+                <div>
+                  <img src="../assets/img/60.png">
+                  <div>
+                    <input type="file" class="position-absolute top-0 end-0 start-0 bottom-0 w-100 z-10 cursor opacity-none">
+                    <img alt="add-circle" src="../assets/img/add-circle.svg" class="position-absolute -bottom-4 start-0 cursor">
+                  </div>
+                </div>
+              </div>
+              <div class="text-center text-white mt-4 avatar-name transition">
+                <h6 class="font-bold">سارا جعفری</h6>
+                <p class="text-white-50">امور پیمانکاری</p>
+              </div>
+            </div>
+            <ul class="m-0 px-0 fw-bold">
+           
+              <li class="px-3 transition">
+                <a href="requests.html" class="d-flex align-items-center justify-content-between text-white">
+                  <div class="d-flex align-items-center gap-3">
+                    <img alt="menu" src="../assets/img/document-text.svg">
+                    <p class="mb-0">درخواست ها</p>
+                  </div>
+                  <img alt="arrow" src="../assets/img/arrow-left.png">
+                </a>
+              </li>
+              <li class="px-3 transition">
+                <a href="projects.html" class="d-flex align-items-center justify-content-between text-white">
+                  <div class="d-flex align-items-center gap-3">
+                    <img alt="menu" src="../assets/img/document-text.svg">
+                    <p class="mb-0">پروژه ها</p>
+                  </div>
+                  <img alt="arrow" src="../assets/img/arrow-left.png">
+                </a>
+              </li>
+              <li class="px-3 transition">
+                <a href="contracts.html" class="d-flex align-items-center justify-content-between text-white">
+                  <div class="d-flex align-items-center gap-3">
+                    <img alt="menu" src="../assets/img/document-text.svg">
+                    <p class="mb-0">قرارداد ها</p>
+                  </div>
+                  <img alt="arrow" src="../assets/img/arrow-left.png">
+                </a>
+              </li>
+              <li class="px-3 transition active">
+                <a href="tickets.html" class="d-flex align-items-center justify-content-between text-white">
+                  <div class="d-flex align-items-center gap-3">
+                    <img alt="menu" src="../assets/img/chat-bubble-left-right (2).png">
+                    <p class="mb-0">تیکت</p>
+                  </div>
+                  <img alt="arrow" src="../assets/img/arrow-left.png">
+                </a>
+              </li>
+            </ul>
+          </div>
+        <div class="p-3 col-10 bg-gray flex-grow-1 h-100vh overflow-auto">
+            <div id="overlay"></div>
+            <!-- header -->
+            <header class="d-flex align-items-lg-center gap-4 flex-column flex-lg-row justify-content-lg-between">
+                <div class="d-flex flex-column flex-md-row align-items-center gap-3">
+                    <div class="d-flex align-items-center gap-3 justify-content-between w-100">
+                        <svg id="openSidebar" xmlns="http://www.w3.org/2000/svg" width="33" height="33"
+                            fill="currentColor" class="bi bi-list d-lg-none cursor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                        <a>
+                            <img alt="logo" src="../assets/img/Frame 9249.png">
+                        </a>
+                    </div>
+                    <div
+                        class="bg-white rounded-12 w-390 py-1 px-2 border d-flex align-items-center justify-content-between">
+                        <input placeholder="جستجو" class="border-0 outline-none flex-grow-1">
+                        <img alt="search" src="../assets/img/Vector.svg">
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="language position-relative cursor">
+                        <div class="d-flex align-items-center gap-2 dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown">
+                            <img alt="language" src="../assets/img/artwork.png">
+                            <p class="mb-0 fw-bold fs-7 text-secondary">فارسی</p>
+                        </div>
+                        <ul class="dropdown-menu p-0 m-0 font-bold bg-white shadow-sm rounded-4">
+                            <li class="d-flex align-items-center justify-content-center py-3 gap-3 border-bottom">
+                                <img alt="language" src="../assets/img/artwork.png">
+                                <p class="mb-0 fw-bold fs-7 text-secondary">فارسی</p>
+                            </li>
+                            <li class="d-flex align-items-center justify-content-center py-3 gap-3">
+                                <img alt="language" src="../assets/img/artwork.png">
+                                <p class="mb-0 fw-bold fs-7 text-secondary">English</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <span class="divider"></span>
+                    <div class="exit d-flex align-items-center gap-2 cursor">
+                        <img alt="language" src="../assets/img/exit.svg">
+                        <p class="mb-0 fw-bold fs-7 text-secondary">خروج از حساب </p>
+                    </div>
+                </div>
+            </header>
+            <!-- main -->
+            <main>
+                <!-- breadcrumb -->
+                <nav aria-label="breadcrumb" class="mt-4">
+                    <ol class="breadcrumb fs-7 font-bold">
+                        <li class="breadcrumb-item"><a class="text-dark" href="profile.html">مدیریت</a></li>
+                        <li class="breadcrumb-item"><a class="text-dark" href="tickets.html">تیکت ها</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">ثبت تیکت</li>
+                    </ol>
+                </nav>
+                <!-- table -->
+                <div class="bg-white rounded-4 pb-3">
+                    <div class="d-flex flex-wrap gap-3 align-items-center justify-content-between p-3 border-bottom">
+                        <a href="tickets.html" class="d-flex align-items-center gap-2 font-bold mb-0 text-dark">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path d="M13.5 4.5L21 12M21 12L13.5 19.5M21 12H3" stroke="#374151" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            ثبت تیکت
+                        </a>
+                    </div>
+                    <div class="px-sm-5 px-3">
+                        <div class="tab-content mt-4" id="myTabContent">
+                            <div class="container">
+                                <form class="row g-4">
+                                    <div class="col-lg-6">
+                                        <div>
+                                            <label for="exampleInputEmail1" class="form-label">موضوع تیکت</label>
+                                            <input type="text" class="form-control" placeholder="موضوع تیکت ">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div>
+                                            <label for="exampleInputEmail1" class="form-label">پشتیبانی</label>
+                                            <select class="form-select">
+                                                <option>پشتیبان را انتخاب کنید</option>
+                                                <option>رضا امیری</option>
+                                                <option>محمد دانایی</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <!-- chat -->
+                                        <div class=" border rounded-12 overflow-hidden">
+                                            <!-- chat box -->
+                                            <div class="h-484 chatBox p-sm-5 p-3 d-flex flex-column align-items-lg-baseline gap-3"
+                                                style="overflow-y: auto;">
+                                                <div class="d-flex align-items-start justify-content-end gap-3 w-100">
+                                                    <div
+                                                        class="rounded-6 w-50 bg-main p-3 text-white fs-7 position-relative">
+                                                        <p class="mb-0 pb-3 border-bottom text-start">علی محمدی نیا |
+                                                            معدن دار</p>
+                                                        <p class="mb-0 mt-3 lh-lg">
+                                                            سلام<br>
+                                                            وقت شما بخیر<br>
+                                                            با قرارداد موافقم و مشکلی نداره
+                                                        </p>
+                                                        <p class="fs-7 text-muted position-absolute end-0 -bottom-42">
+                                                            1402/08/09 13:58</p>
+                                                    </div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                        viewBox="0 0 20 20" fill="none">
+                                                        <path
+                                                            d="M15.9815 16.7248C14.6121 14.9175 12.4424 13.75 10 13.75C7.55761 13.75 5.38789 14.9175 4.01846 16.7248M15.9815 16.7248C17.8335 15.0763 19 12.6744 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 12.6744 2.1665 15.0763 4.01846 16.7248M15.9815 16.7248C14.3915 18.1401 12.2962 19 10 19C7.70383 19 5.60851 18.1401 4.01846 16.7248M13 7.75C13 9.40685 11.6569 10.75 10 10.75C8.34315 10.75 7 9.40685 7 7.75C7 6.09315 8.34315 4.75 10 4.75C11.6569 4.75 13 6.09315 13 7.75Z"
+                                                            stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                                <div
+                                                    class="d-flex align-items-start justify-content-start gap-3 w-100 mt-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none">
+                                                        <path
+                                                            d="M5.46005 18.4898V15.5698C5.46005 14.5998 6.22005 13.7298 7.30005 13.7298C8.27005 13.7298 9.14005 14.4898 9.14005 15.5698V18.3798C9.14005 20.3298 7.52005 21.9498 5.57005 21.9498C3.62005 21.9498 2.00005 20.3198 2.00005 18.3798V12.2198C1.89005 6.5998 6.33005 2.0498 11.95 2.0498C17.57 2.0498 22 6.5998 22 12.1098V18.2698C22 20.2198 20.38 21.8398 18.43 21.8398C16.48 21.8398 14.86 20.2198 14.86 18.2698V15.4598C14.86 14.4898 15.62 13.6198 16.7 13.6198C17.67 13.6198 18.54 14.3798 18.54 15.4598V18.4898"
+                                                            stroke="#00BED8" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                    <div
+                                                        class="rounded-6 w-50 bg-info p-3 text-white fs-7 position-relative">
+                                                        <p class="mb-0 pb-3 border-bottom text-end">محمد صادقی | کارشناس
+                                                            امور پیمانکاری</p>
+                                                        <p class="mb-0 mt-3 lh-lg">
+                                                            سلام<br>
+                                                            خیلی هم عالی
+                                                        </p>
+                                                        <p class="fs-7 text-muted position-absolute start-0 -bottom-42">
+                                                            1402/08/09 13:58</p>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="d-flex align-items-start justify-content-end gap-3 w-100 mt-3">
+                                                    <div
+                                                        class="rounded-6 w-50 bg-main p-3 text-white fs-7 position-relative">
+                                                        <p class="mb-0 pb-3 border-bottom text-start">سجاد کریمی |
+                                                            پیمانکار</p>
+                                                        <p class="mb-0 mt-3 lh-lg">
+                                                            سلام<br>
+                                                            سلام یه سری موارد هست تو قرار داد باید اصلاح بشه برای
+                                                            پیمانکار
+                                                            بند شماره 9 و شماره 13 رو لطفا بازبینی کنین.
+                                                        </p>
+                                                        <a class="d-flex align-items-center gap-2 text-info mt-2">
+                                                            <p class="mb-0">فایل پیوست 01</p>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" viewBox="0 0 16 16" fill="none">
+                                                                <path
+                                                                    d="M2 11V12.5C2 13.3284 2.67157 14 3.5 14H12.5C13.3284 14 14 13.3284 14 12.5V11M11 8L8 11M8 11L5 8M8 11V2"
+                                                                    stroke="#00BED8" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </a>
+                                                        <p class="fs-7 text-muted position-absolute end-0 -bottom-42">
+                                                            1402/08/09 13:58</p>
+                                                    </div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                        viewBox="0 0 20 20" fill="none">
+                                                        <path
+                                                            d="M15.9815 16.7248C14.6121 14.9175 12.4424 13.75 10 13.75C7.55761 13.75 5.38789 14.9175 4.01846 16.7248M15.9815 16.7248C17.8335 15.0763 19 12.6744 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 12.6744 2.1665 15.0763 4.01846 16.7248M15.9815 16.7248C14.3915 18.1401 12.2962 19 10 19C7.70383 19 5.60851 18.1401 4.01846 16.7248M13 7.75C13 9.40685 11.6569 10.75 10 10.75C8.34315 10.75 7 9.40685 7 7.75C7 6.09315 8.34315 4.75 10 4.75C11.6569 4.75 13 6.09315 13 7.75Z"
+                                                            stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                                <div
+                                                    class="d-flex align-items-start justify-content-start gap-3 w-100 mt-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none">
+                                                        <path
+                                                            d="M5.46005 18.4898V15.5698C5.46005 14.5998 6.22005 13.7298 7.30005 13.7298C8.27005 13.7298 9.14005 14.4898 9.14005 15.5698V18.3798C9.14005 20.3298 7.52005 21.9498 5.57005 21.9498C3.62005 21.9498 2.00005 20.3198 2.00005 18.3798V12.2198C1.89005 6.5998 6.33005 2.0498 11.95 2.0498C17.57 2.0498 22 6.5998 22 12.1098V18.2698C22 20.2198 20.38 21.8398 18.43 21.8398C16.48 21.8398 14.86 20.2198 14.86 18.2698V15.4598C14.86 14.4898 15.62 13.6198 16.7 13.6198C17.67 13.6198 18.54 14.3798 18.54 15.4598V18.4898"
+                                                            stroke="#00BED8" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                    <div
+                                                        class="rounded-6 w-50 bg-info p-3 text-white fs-7 position-relative">
+                                                        <p class="mb-0 pb-3 border-bottom text-end">محمد صادقی | کارشناس
+                                                            امور پیمانکاری</p>
+                                                        <p class="mb-0 mt-3 lh-lg">
+                                                            سلام<br>
+                                                            باشه بررسی میکنم
+                                                        </p>
+                                                        <p class="fs-7 text-muted position-absolute start-0 -bottom-42">
+                                                            1402/08/09 13:58</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- send message -->
+                                            <div
+                                                class="d-flex align-items-center justify-content-between gap-3 border-top py-3 px-4 resize-none">
+                                                <div class="d-flex align-items-center flex-grow-1">
+                                                    <div class="position-relative w-24 h-24 cursor">
+                                                        <svg class="cursor" xmlns="http://www.w3.org/2000/svg"
+                                                            width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                            <path
+                                                                d="M18.375 12.739L10.682 20.432C8.92462 22.1893 6.07538 22.1893 4.31802 20.432C2.56066 18.6746 2.56066 15.8254 4.31802 14.068L15.2573 3.12868C16.4289 1.95711 18.3283 1.95711 19.4999 3.12868C20.6715 4.30025 20.6715 6.19975 19.4999 7.37132L8.55158 18.3197M8.56066 18.3107C8.55764 18.3137 8.55462 18.3167 8.55158 18.3197M14.2498 8.37865L6.43934 16.1893C5.85355 16.7751 5.85355 17.7249 6.43934 18.3107C7.02211 18.8934 7.9651 18.8964 8.55158 18.3197"
+                                                                stroke="#1F2A37" stroke-width="1.5"
+                                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                        <input type="file"
+                                                            class="position-absolute cursor w-100 h-100 end-0 top-0 start-0 bottom-0 z-10 opacity-none">
+                                                    </div>
+                                                    <input class="flex-grow-1 fs-14 form-control border-0"
+                                                        placeholder="پیام جدید">
+                                                </div>
+                                                <div class="position-relative cursor">
+                                                    <svg class="cursor" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                        height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path
+                                                            d="M20.5222 2.4043C20.7869 2.3274 21.0725 2.40193 21.2659 2.5984C21.4593 2.79487 21.5293 3.0816 21.4483 3.3451L19.016 11.25H10.5002C10.086 11.25 9.75024 11.5858 9.75024 12C9.75024 12.4142 10.086 12.75 10.5002 12.75H19.016L21.4482 20.6546C21.5292 20.9181 21.4592 21.2049 21.2658 21.4013C21.0724 21.5978 20.7868 21.6723 20.5221 21.5954C13.8235 19.6494 7.60282 16.5814 2.07697 12.6087C1.88097 12.4678 1.76477 12.2412 1.76478 11.9998C1.76478 11.7583 1.88097 11.5317 2.07698 11.3908C7.60287 7.41817 13.8236 4.35021 20.5222 2.4043Z"
+                                                            fill="#00BED8"></path>
+                                                    </svg>
+                                                    <input type="submit"
+                                                        class="position-absolute cursor end-0 top-0 start-0 bottom-0 w-100 h-100 z-10 opacity-none">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+
+    <script src="../assets/js/scripts.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../assets/js/jquery.uploader.min.js"></script>
+    <script type="application/javascript">
+        let ajaxConfig = {
+            ajaxRequester: function (config, uploadFile, pCall, sCall, eCall) {
+                let progress = 0
+                let interval = setInterval(() => {
+                    progress += 10;
+                    pCall(progress)
+                    if (progress >= 100) {
+                        clearInterval(interval)
+                        const windowURL = window.URL || window.webkitURL;
+                        sCall({
+                            data: windowURL.createObjectURL(uploadFile.file)
+                        })
+                        // eCall("上传异常")
+                    }
+                }, 300)
+            }
+        }
+        $("#demo1").uploader({ multiple: true, ajaxConfig: ajaxConfig, autoUpload: false }) </script>
+
+</body>
+
+</html>
